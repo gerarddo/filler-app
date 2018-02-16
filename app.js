@@ -14,9 +14,9 @@ app.use(cors());
 app.use(methodOverride("_method"));
 app.use('/api',apiRoutes);
 
-app.get('/', (req, res) => {
-    res.send("This the backend working!")
-});
+// app.get('/', (req, res) => {
+//     res.send("This the backend working!")
+// });
 
 app.use(express.static(path.join(__dirname, 'dist')));
 app.get('*', (req, res) => {
