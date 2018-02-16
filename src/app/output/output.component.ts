@@ -1,3 +1,4 @@
+import { ScaffoldService } from './../services/scaffold.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,11 @@ export class OutputComponent implements OnInit {
 
   gcode: String = "No gcode has been written yet";
 
-  constructor() { }
+  constructor(private scaffoldService: ScaffoldService) { 
+    this.scaffoldService.updatedGcode.subscribe((updatedGcode) => {
+      this.gcode = updatedGcode
+    })
+  }
 
   ngOnInit() {
   }

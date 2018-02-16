@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <form>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
     <h1 class="text-center">Create a cylinder</h1>
     <div class="row">
       <!-- radius -->
@@ -11,7 +11,8 @@
             type="text" 
             name="radius" 
             placeholder="radius" 
-            required>
+            required
+            [ngModel]="radius">
         </div>
       </div>
       <!-- plank step -->
@@ -23,7 +24,8 @@
             type="text" 
             name="step" 
             placeholder="step" 
-            required>
+            required
+            [ngModel]="step">
         </div>
       </div>
       <!-- height -->
@@ -35,7 +37,8 @@
             type="text" 
             name="height" 
             placeholder="height" 
-            required>	
+            required
+            [ngModel]="height">	
         </div>
       </div>
       <!-- height step -->
@@ -47,7 +50,8 @@
             type="text" 
             name="heightStep" 
             placeholder="step on z axis" 
-            required>
+            required
+            [ngModel]="heightStep">
         </div>
       </div>
     </div>
