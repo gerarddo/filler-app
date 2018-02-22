@@ -1,62 +1,50 @@
-<div class="container-fluid">
-  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-    <h1 class="text-center">Create a cylinder</h1>
-    <div class="row">
-      <!-- radius -->
-      <div class="col-sm-6"><label>Radius:</label></div>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <input 
-            class="form-control" 
-            type="text" 
-            name="radius" 
-            placeholder="radius" 
-            required
-            [ngModel]="radius">
-        </div>
-      </div>
-      <!-- plank step -->
-      <div class="col-sm-6"><label>Plank step:</label></div>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <input 
-            class="form-control" 
-            type="text" 
-            name="step" 
-            placeholder="step" 
-            required
-            [ngModel]="step">
-        </div>
-      </div>
-      <!-- height -->
-      <div class="col-sm-6"><label>Height:</label></div>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <input 
-            class="form-control" 
-            type="text" 
-            name="height" 
-            placeholder="height" 
-            required
-            [ngModel]="height">	
-        </div>
-      </div>
-      <!-- height step -->
-      <div class="col-sm-6"><label>Height step:</label></div>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <input 
-            class="form-control" 
-            type="text" 
-            name="heightStep" 
-            placeholder="step on z axis" 
-            required
-            [ngModel]="heightStep">
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <button class="btn btn-lg btn-primary btn-block">Enviar</button>
-    </div>
-  </form>
-  </div>
+<!-- <a 
+    class="btn btn-primary" 
+    [routerLink]="['parameters', 'cylinder']"
+    routerLinkActive="active">
+    Cylinder
+</a>
+<a 
+    class="btn btn-primary" 
+    [routerLink]="['parameters', 'cuboid']"
+    routerLinkActive="active">
+    Cuboid
+</a>
+<a 
+    class="btn btn-primary" 
+    [routerLink]="['parameters', 'custom']"
+    routerLinkActive="active">
+    Custom
+</a> -->
+<div class="polygonCasesContainer clearfix">
+    <!-- <ul class="clearfix"> -->
+        <!-- <li> -->
+            <a 
+                class="btn btn-primary" 
+                [routerLink]="['parameters', 'cylinder']"
+                routerLinkActive="active">
+                Cylinder
+            </a>
+        <!-- </li> -->
+        <!-- <li> -->
+            <a 
+                class="btn btn-primary" 
+                [routerLink]="['parameters', 'cuboid']"
+                routerLinkActive="active">
+                Cuboid
+            </a>
+        <!-- </li> -->
+        <!-- <li> -->
+            <a 
+                class="btn btn-primary" 
+                [routerLink]="['parameters', 'custom']"
+                routerLinkActive="active">
+                Custom
+            </a>
+        <!-- </li> -->
+    <!-- </ul> -->
+</div>
+
+
+<!-- <p><a href="https://nraynaud.github.io/webgcode/" target="_blank">gcode simulator</a></p> -->
+<router-outlet></router-outlet>

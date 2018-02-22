@@ -1,0 +1,16 @@
+input.ng-invalid {
+    border: solid red 1px;
+}
+
+
+div.polygonCasesContainer {
+    display: block;
+    /* margin: auto; */
+    width: 100%;
+}
+
+
+a {
+    float: left;
+    margin-right: 5px;
+}
