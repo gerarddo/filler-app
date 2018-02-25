@@ -2,7 +2,7 @@ const   express                 = require("express"),
         app                     = express(),
         cors                    = require('cors'),
         path                    = require('path'),
-        methodOverride          = require("method-override"),
+        // methodOverride          = require("method-override"),
         bodyParser              = require("body-parser") 
 // var     apiRoutes 		        = require("./routes/api")
 
@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use("/web", express.static(path.join(__dirname, "web")));
 app.use(cors());
-app.use(methodOverride("_method"));
+// app.use(methodOverride("_method"));
 // app.use('/api',apiRoutes);
 
 // app.get('/', (req, res) => {
