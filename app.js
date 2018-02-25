@@ -9,7 +9,7 @@ const   express                 = require("express"),
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname, "public")));
+app.use("/web", express.static(path.join(__dirname, "web")));
 app.use(cors());
 app.use(methodOverride("_method"));
 // app.use('/api',apiRoutes);
@@ -22,6 +22,10 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
+
+app.get("/simulator", (req, res) => {
+  res.render("simulator")
+})
 
 
 

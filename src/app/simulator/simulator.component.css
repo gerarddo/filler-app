@@ -1,0 +1,19 @@
+#renderArea {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0px;
+
+    /*margin-top: 200px;*/
+    /*height: 1000px;*/
+    /*width: 400px;*/
+    background-color: white;
+  }
+  #canvas {
+/*        height: 500px;
+    width: 500px;*/
+  }
+  .dg.main {
+    margin-top:40px;
+  }
