@@ -8,6 +8,7 @@ import 'rxjs/add/operator/map';
 export class ScaffoldService {
 
     updatedGcode = new EventEmitter<string>();
+    updatedSimulator = new EventEmitter<boolean>();
 
     constructor(private http: Http){}
 
@@ -26,7 +27,7 @@ export class ScaffoldService {
 
         return this.http
           .post("https://filler-cidep-b.herokuapp.com/fill", body, options)
-        //   .post("http://159.65.186.192/fill", body, options)
+          // .post("http://localhost:3000/fill", body, options)
           .map(res => res.json())
     }
 

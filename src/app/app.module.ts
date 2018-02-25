@@ -17,7 +17,8 @@ const appRoutes: Routes = [
   // {path: 'parameters', component: ParametersComponent, children: [
   {path: 'parameters/cylinder', component: CylinderParamsComponent},
   {path: 'parameters/cuboid', component: CuboidParamsComponent},
-  {path: 'parameters/custom', component: CustomParamsComponent}
+  {path: 'parameters/custom', component: CustomParamsComponent},
+  {path: 'simulator', component: SimulatorComponent}
   // ]}
 ]
 

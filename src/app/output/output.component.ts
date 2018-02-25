@@ -9,12 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class OutputComponent implements OnInit {
 
   gcode: String = "No gcode has been written yet";
+  height: number;
 
   constructor(private scaffoldService: ScaffoldService) { 
     this.scaffoldService.updatedGcode.subscribe((updatedGcode) => {
       this.gcode = updatedGcode
     })
+
+    this.height = (window.screen.height) - 650 ;
   }
+
+
 
   ngOnInit() {
   }
