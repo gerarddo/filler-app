@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OutputInfoComponent implements OnInit {
 
-  info: object = {
+  info: any = {
     planks: null,
     area: null,
     volume: null
