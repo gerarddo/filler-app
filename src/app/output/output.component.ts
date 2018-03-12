@@ -12,9 +12,13 @@ export class OutputComponent implements OnInit {
   height: number;
 
   constructor(private scaffoldService: ScaffoldService) { 
-    this.scaffoldService.updatedGcode.subscribe((updatedGcode) => {
-      this.gcode = updatedGcode
+    this.scaffoldService.updatedCIDEPGcode.subscribe((updatedCIDEPGcode) => {
+      this.gcode = updatedCIDEPGcode
     })
+
+    // this.scaffoldService.updatedGcode.subscribe((Gcode) => {
+    //   this.gcode = Gcode
+    // })
 
     this.height = (window.screen.height) - 650 ;
   }

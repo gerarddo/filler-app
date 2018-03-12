@@ -24,9 +24,12 @@ export class CylinderParamsComponent implements OnInit {
 
   onSubmit(){
     let parameters = this.paramsForm.value
-    this.scaffoldService.createScaffold(parameters).subscribe((data) => {
-      this.scaffoldService.updatedGcode.emit(data);
+    this.scaffoldService.generateGcodeAndInfo(parameters).subscribe((data) => {
+      this.scaffoldService.updatedCIDEPGcode.emit(data.CIDEPGcode);
+      this.scaffoldService.updatedGcode.emit(data.Gcode);
       this.scaffoldService.updatedSimulator.emit(false);
+      this.scaffoldService.updatedInfo.emit(data.info);
+
     })
   }
 }

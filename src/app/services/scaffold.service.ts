@@ -1,3 +1,4 @@
+import { ConfigService } from './config.service';
 import { Injectable, EventEmitter } from '@angular/core'
 import { Http, RequestOptions, Headers } from '@angular/http'
 
@@ -7,29 +8,25 @@ import 'rxjs/add/operator/map';
 
 export class ScaffoldService {
 
+    updatedCIDEPGcode = new EventEmitter<string>();
     updatedGcode = new EventEmitter<string>();
     updatedSimulator = new EventEmitter<boolean>();
+    updatedInfo = new EventEmitter<object>();
 
-    constructor(private http: Http){}
+    constructor(private http: Http,
+                private configService: ConfigService){}
 
-    createScaffold(parameters: any){
+    generateGcodeAndInfo(parameters: any){
 
         let headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
         let options = new RequestOptions({headers: headers});
-
-        // parameters.polygonCase = "circle"
-
         let encodedParameters = encodeURIComponent(JSON.stringify(parameters))
         let body = 'parameters=' + encodedParameters
-
-        console.log("from create scaffold")
-        console.log(body)
+        let url = this.configService.backEndBaseUrl + "/fill";
 
         return this.http
-          .post("https://filler-cidep-b.herokuapp.com/fill", body, options)
-          // .post("http://localhost:3000/fill", body, options)
+        //   .post("https://filler-cidep-b.herokuapp.com/fill", body, options)
+          .post(url, body, options)
           .map(res => res.json())
     }
-
-
 }

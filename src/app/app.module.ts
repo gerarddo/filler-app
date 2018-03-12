@@ -7,11 +7,14 @@ import { AppComponent } from './app.component';
 import { ParametersComponent } from './parameters/parameters.component';
 import { OutputComponent } from './output/output.component';
 import { ScaffoldService } from './services/scaffold.service';
+import { ConfigService } from './services/config.service';
+
 import { HttpModule } from '@angular/http';
 import { CylinderParamsComponent } from './parameters/cylinder-params/cylinder-params.component';
 import { CuboidParamsComponent } from './parameters/cuboid-params/cuboid-params.component';
 import { CustomParamsComponent } from './parameters/custom-params/custom-params.component';
 import { SimulatorComponent } from './simulator/simulator.component';
+import { OutputInfoComponent } from './output/output-info/output-info.component';
 
 const appRoutes: Routes = [
   // {path: 'parameters', component: ParametersComponent, children: [
@@ -30,7 +33,8 @@ const appRoutes: Routes = [
     CylinderParamsComponent,
     CuboidParamsComponent,
     CustomParamsComponent,
-    SimulatorComponent
+    SimulatorComponent,
+    OutputInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,8 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ScaffoldService],
+  providers: [ScaffoldService,
+              ConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
