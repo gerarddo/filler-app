@@ -11,14 +11,18 @@ export class OutputComponent implements OnInit {
   gcode: String = "No gcode has been written yet";
   height: number;
 
+  info: any = {
+    planks: null,
+    area: null,
+    volume: null
+  }
   constructor(private scaffoldService: ScaffoldService) { 
     this.scaffoldService.updatedCIDEPGcode.subscribe((updatedCIDEPGcode) => {
       this.gcode = updatedCIDEPGcode
     })
-
-    // this.scaffoldService.updatedGcode.subscribe((Gcode) => {
-    //   this.gcode = Gcode
-    // })
+    this.scaffoldService.updatedInfo.subscribe((updatedInfo) => {
+      this.info = updatedInfo;
+    })
 
     this.height = (window.screen.height) - 650 ;
   }

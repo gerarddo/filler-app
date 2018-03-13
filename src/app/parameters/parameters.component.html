@@ -16,34 +16,65 @@
     routerLinkActive="active">
     Custom
 </a> -->
-<div class="polygonCasesContainer clearfix">
-    <!-- <ul class="clearfix"> -->
-        <!-- <li> -->
-            <a 
+<br>
+
+<h1>Filler UI</h1>
+
+<div class="row">
+    <div class="col">
+        <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Select polygon</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button 
+                class="dropdown-item"
+                [routerLink]="['parameters', 'cylinder']"
+                routerLinkActive="active">
+                Cylinder
+            </button>
+            <button 
+                class="dropdown-item"
+                [routerLink]="['parameters', 'cuboid']"
+                routerLinkActive="active">
+                Cuboid
+            </button>
+            <button 
+                class="dropdown-item"
+                [routerLink]="['parameters', 'custom']"
+                routerLinkActive="active">
+                Custom
+            </button>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+            
+            <!-- <a 
                 class="btn btn-primary" 
                 [routerLink]="['parameters', 'cylinder']"
                 routerLinkActive="active">
                 Cylinder
             </a>
-        <!-- </li> -->
-        <!-- <li> -->
             <a 
                 class="btn btn-primary" 
                 [routerLink]="['parameters', 'cuboid']"
                 routerLinkActive="active">
                 Cuboid
-            </a>
-        <!-- </li> -->
-        <!-- <li> -->
-            <a 
+            </a> -->
+            <!-- <a 
                 class="btn btn-primary" 
                 [routerLink]="['parameters', 'custom']"
                 routerLinkActive="active">
                 Custom
-            </a>
-        <!-- </li> -->
-    <!-- </ul> -->
-</div>
+            </a> -->
+
+
+
+
+
 
 
 <!-- <p><a href="https://nraynaud.github.io/webgcode/" target="_blank">gcode simulator</a></p> -->

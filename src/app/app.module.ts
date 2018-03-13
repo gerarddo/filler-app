@@ -14,7 +14,8 @@ import { CylinderParamsComponent } from './parameters/cylinder-params/cylinder-p
 import { CuboidParamsComponent } from './parameters/cuboid-params/cuboid-params.component';
 import { CustomParamsComponent } from './parameters/custom-params/custom-params.component';
 import { SimulatorComponent } from './simulator/simulator.component';
-import { OutputInfoComponent } from './output/output-info/output-info.component';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
   // {path: 'parameters', component: ParametersComponent, children: [
@@ -33,14 +34,14 @@ const appRoutes: Routes = [
     CylinderParamsComponent,
     CuboidParamsComponent,
     CustomParamsComponent,
-    SimulatorComponent,
-    OutputInfoComponent
+    SimulatorComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    NgbModule.forRoot()
   ],
   providers: [ScaffoldService,
               ConfigService],
