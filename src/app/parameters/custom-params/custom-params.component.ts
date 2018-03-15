@@ -30,6 +30,10 @@ export class CustomParamsComponent implements OnInit {
 }
 
 
+get DynamicFormControls() {
+
+  return <FormArray>this.myForm.get('points');
+}
 
   initPoint() {
       return this._fb.group({
@@ -40,6 +44,8 @@ export class CustomParamsComponent implements OnInit {
 
   addPoint() {
       const control = <FormArray>this.myForm.controls['points'];
+      console.log("sdfsdfsd")
+      console.log(this.myForm)
       control.push(this.initPoint());
   }
 
