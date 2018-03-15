@@ -1,3 +1,54 @@
-<p>
-  custom-params works!
-</p>
+
+<br>
+    <svg height="210" width="210" style="border: solid gray 1px; display: block; margin: auto; margin-top: 10px;">
+      <polygon style="fill:steelblue;stroke:black;stroke-width:1" [attr.points]="stringPoints" #polygon/>
+    </svg>
+
+<br>
+            <form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm)">
+
+              <div formArrayName="points">
+                <div *ngFor="let point of myForm.controls.points.controls; let i=index" class="panel panel-default">
+                  
+                  <div class="row" [formGroupName]="i">
+                    <div class="col-sm-2">
+                      <label>
+                        Point:
+                        <span *ngIf="myForm.controls.points.controls.length > 3" (click)="removePoint(i)">
+                          DELETE
+                        </span>
+                      </label>
+                    </div>
+                    <div class="form-group col-sm-5">
+                      <input 
+                        type="text" 
+                        class="form-control" 
+                        formControlName="x" 
+                        placeholder="x coordinate">
+                    </div>
+                    <div class="form-group col-sm-5">
+                      <input 
+                        type="text" 
+                        class="form-control" 
+                        formControlName="y" 
+                        placeholder="y coordinate">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+      
+              <button class="btn btn-primary" (click)="addPoint()" >
+                Add another point +
+              </button>
+
+              <button type="submit" class="btn btn-primary pull-right" [disabled]="!myForm.valid">
+                Submit
+              </button>
+                    
+            </form>
+
+            <!-- <div class="container-fluid" style="border: solid black 1px;">
+                <pre>Is myForm valid?: <br>{{myForm.valid | json}}</pre>
+                <pre>form value: <br>{{myForm.value | json}}</pre>
+            </div> -->

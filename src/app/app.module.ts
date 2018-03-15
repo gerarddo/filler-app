@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -14,6 +14,8 @@ import { CylinderParamsComponent } from './parameters/cylinder-params/cylinder-p
 import { CuboidParamsComponent } from './parameters/cuboid-params/cuboid-params.component';
 import { CustomParamsComponent } from './parameters/custom-params/custom-params.component';
 import { SimulatorComponent } from './simulator/simulator.component';
+import { ClipboardModule } from 'ngx-clipboard';
+
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -39,9 +41,11 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    ClipboardModule
   ],
   providers: [ScaffoldService,
               ConfigService],

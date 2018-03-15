@@ -1,55 +1,61 @@
-
-  <form [formGroup]="paramsForm" (ngSubmit)='onSubmit()'>
+<div class="row">
+  <div class="col-sm-12">
     <br>
-    <div class="row">
-      <!-- radius -->
-      <div class="col-sm-6"><label>Radius:</label></div>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <input 
-            class="form-control" 
-            type="number" 
-            placeholder="radius" 
-            formControlName='radius'>
-        </div>
+    <p>All parameters go in mm</p>
+    <form [formGroup]="paramsForm" (ngSubmit)='onSubmit()'>
+      <table class="table table-striped">
+        <tbody>
+          <!-- radius -->
+          <tr>
+            <th scope="row">Radius:</th>
+            <td>
+              <input 
+              class="form-control" 
+              type="number" 
+              placeholder="radius" 
+              formControlName='radius'>
+            </td>
+          </tr>
+          <!-- plank step -->
+          <tr>
+            <th scope="row">Plank step:</th>
+            <td>
+              <input 
+              class="form-control" 
+              type="number" 
+              placeholder="step" 
+              formControlName='step'>
+            </td>
+          </tr>
+          <!-- height -->
+          <tr>
+            <th scope="row">Height:</th>
+            <td>
+              <input 
+              class="form-control" 
+              type="number" 
+              placeholder="height" 
+              formControlName='height'>
+            </td>
+          </tr>
+          <!-- height step -->
+          <tr>
+            <th scope="row">Height step:</th>
+            <td>
+              <input 
+              class="form-control" 
+              type="number" 
+              placeholder="step on z axis" 
+              formControlName='heightStep'>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="form-group">
+        <button 
+          class="btn btn-lg btn-primary btn-block"
+          [disabled]="!paramsForm.valid">Enviar</button>
       </div>
-      <!-- plank step -->
-      <div class="col-sm-6"><label>Plank step:</label></div>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <input 
-            class="form-control" 
-            type="number" 
-            placeholder="step" 
-            formControlName='step'>
-        </div>
-      </div>
-      <!-- height -->
-      <div class="col-sm-6"><label>Height:</label></div>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <input 
-            class="form-control" 
-            type="number" 
-            placeholder="height" 
-            formControlName='height'>	
-        </div>
-      </div>
-      <!-- height step -->
-      <div class="col-sm-6"><label>Height step:</label></div>
-      <div class="col-sm-6">
-        <div class="form-group">
-          <input 
-            class="form-control" 
-            type="number" 
-            placeholder="step on z axis" 
-            formControlName='heightStep'>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <button 
-        class="btn btn-lg btn-primary btn-block"
-        [disabled]="!paramsForm.valid">Enviar</button>
-    </div>
-  </form>
+    </form>
+  </div> <!-- .col-sm-12 -->
+</div>

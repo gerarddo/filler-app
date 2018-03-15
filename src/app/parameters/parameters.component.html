@@ -1,81 +1,33 @@
-<!-- <a 
-    class="btn btn-primary" 
-    [routerLink]="['parameters', 'cylinder']"
-    routerLinkActive="active">
-    Cylinder
-</a>
-<a 
-    class="btn btn-primary" 
-    [routerLink]="['parameters', 'cuboid']"
-    routerLinkActive="active">
-    Cuboid
-</a>
-<a 
-    class="btn btn-primary" 
-    [routerLink]="['parameters', 'custom']"
-    routerLinkActive="active">
-    Custom
-</a> -->
-<br>
-
-<h1>Filler UI</h1>
 
 <div class="row">
-    <div class="col">
-        <div ngbDropdown class="d-inline-block">
-        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Select polygon</button>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button 
-                class="dropdown-item"
-                [routerLink]="['parameters', 'cylinder']"
-                routerLinkActive="active">
-                Cylinder
-            </button>
-            <button 
-                class="dropdown-item"
-                [routerLink]="['parameters', 'cuboid']"
-                routerLinkActive="active">
-                Cuboid
-            </button>
-            <button 
-                class="dropdown-item"
-                [routerLink]="['parameters', 'custom']"
-                routerLinkActive="active">
-                Custom
-            </button>
-        </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-            
-            <!-- <a 
-                class="btn btn-primary" 
-                [routerLink]="['parameters', 'cylinder']"
-                routerLinkActive="active">
+    <div class="col-sm-12" >
+        <h1 class="text-center">Filler UI</h1>
+        <div class="list-group" id="list-tab" role="tablist">
+            <a 
+                class="list-group-item list-group-item-action" 
+                data-toggle="list" 
+                role="tab" 
+                [routerLink]="['parameters', 'cylinder']">
                 Cylinder
             </a>
             <a 
-                class="btn btn-primary" 
-                [routerLink]="['parameters', 'cuboid']"
-                routerLinkActive="active">
+                class="list-group-item list-group-item-action"  
+                data-toggle="list" 
+                role="tab"
+                [routerLink]="['parameters', 'cuboid']">
                 Cuboid
-            </a> -->
-            <!-- <a 
-                class="btn btn-primary" 
-                [routerLink]="['parameters', 'custom']"
-                routerLinkActive="active">
+            </a>
+            <a 
+                class="list-group-item list-group-item-action"  
+                data-toggle="list" 
+                role="tab" 
+                [routerLink]="['parameters', 'custom']">
                 Custom
-            </a> -->
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <router-outlet></router-outlet>
+    </div>
+</div>
 
-
-
-
-
-
-
-<!-- <p><a href="https://nraynaud.github.io/webgcode/" target="_blank">gcode simulator</a></p> -->
-<router-outlet></router-outlet>

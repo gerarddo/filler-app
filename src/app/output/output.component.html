@@ -21,6 +21,7 @@
     <ngb-tab>
     <ng-template ngbTabTitle><b>G</b>code</ng-template>
       <ng-template ngbTabContent>
+
         <br>
         <div class="form-group">
           <textarea 
@@ -28,6 +29,15 @@
             [style.height.px]="height">{{ gcode }}</textarea>
         </div>
 
+        <button 
+          class="btn btn-primary" 
+          type="button" 
+          ngxClipboard 
+          (cbOnSuccess)="isCopied = true"
+          [class.btn-success] = "isCopied"
+          cbContent="{{ gcode }}">
+          Copy
+        </button>
       </ng-template>
     </ngb-tab>
     <ngb-tab>
@@ -50,6 +60,11 @@
                 <th scope="row">Volume:</th>
                 <td>{{ info.volume }}</td>
                 <td>(mm^3)</td>
+              </tr>
+              <tr>
+                <th scope="row">Path length:</th>
+                <td>{{ info.length }}</td>
+                <td>(mm)</td>
               </tr>
             </tbody>
           </table>
