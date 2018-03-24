@@ -7,8 +7,8 @@ import 'rxjs/add/operator/map';
 
 export class ConfigService {
 
-    backEndBaseUrl: string = "http://localhost:3000";
-    // backEndBaseUrl: string = "https://filler-cidep-b.herokuapp.com";
+    // backEndBaseUrl: string = "http://localhost:3000";
+    backEndBaseUrl: string = "https://filler-cidep-b.herokuapp.com";
 
     constructor(){}
 
