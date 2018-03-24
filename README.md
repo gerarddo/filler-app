@@ -1,28 +1,58 @@
-# FillerCidep
+# Filler 
+Filler is a javascript web application that creates gcode paths for 3D printing scaffolds with investigative purposes on tissue engineering applications.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
+It is divided in two pieces of software, one for the [back-end](https://filler-cidep-b.herokuapp.com) and another for the [front-end](https://filler-cidep.herokuapp.com). 
 
-## Development server
+This project was generated with [Angular CLI]
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Repositories
+In a similar fashion, the app repositories are divided in [back-end](https://github.com/gerarddo/filler-cidep-api) and [front-end](https://github.com/gerarddo/filler-cidep)
 
-## Code scaffolding
+---
+## Filler API
+## Filler GUI
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-## Running unit tests
+### Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+What things you need to install the software and how to install them
 
-## Running end-to-end tests
+```
+Give examples
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+### Installing
 
-## Further help
+A step by step series of examples that tell you have to get a development env running
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Say what the step will be
+
+```
+Give the example
+```
+
+And repeat
+
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Authors
+
+* **Gerardo Mijares** - [lapsusdev.com](https://lapsusdev.com)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+
