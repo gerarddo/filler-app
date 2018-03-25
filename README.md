@@ -28,7 +28,7 @@ The connection with Filler API is set at ./src/app/services/config.service.ts wi
 
 ### Prerequisites
 
-Filler GUI is built on [Angular 5](https://angular.io) and makes use of [Bootstrap](https://getbootstrap.com/) and [ng-bootstrap](https://ng-bootstrap.github.io/#/home).
+Filler GUI is built on [Angular 5](https://angular.io) running on [Node.js](https://nodejs.org/en/) and makes use of [Bootstrap](https://getbootstrap.com/) and [ng-bootstrap](https://ng-bootstrap.github.io/#/home).
 
 ## Authors
 
