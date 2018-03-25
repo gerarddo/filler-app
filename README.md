@@ -1,5 +1,5 @@
 # Filler 
-_Filler_ is a javascript web application that creates gcode paths for 3D printing scaffolds with investigative purposes on tissue engineering applications.
+_Filler_ is a javascript web application that creates gcode paths for 3D printing scaffolds with research purposes on tissue engineering applications.
 
 It is divided in two pieces of software, one for the [back-end](https://filler-cidep-b.herokuapp.com) and another for the [front-end](https://filler-cidep.herokuapp.com). 
 
